@@ -15,6 +15,8 @@ namespace QLQuanCafe
 {
     public partial class fTableManager : Form
     {
+        private Account LoginAccount;
+
         public fTableManager()
         {
             InitializeComponent();
@@ -97,11 +99,6 @@ namespace QLQuanCafe
             ShowBill(tableID);
         }
 
-     
-    
-    
-
-        
 
         private void đăngXuấtToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -110,7 +107,8 @@ namespace QLQuanCafe
 
         private void ADMINToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fAdmin f = new fAdmin();
+            fAccountProfile f = new fAccountProfile(LoginAccount);
+            f.UpdateAccount += f_UpdateAccount;
             f.ShowDialog();
         }
 
@@ -118,6 +116,11 @@ namespace QLQuanCafe
         {
             fAccountProfile f = new fAccountProfile();
             f.ShowDialog();
+
+        }
+        void f_UpdateAccount(object sender, AccountEvent e)
+        {
+            ADMINToolStripMenuItem.Text = "Thông tin tài khoản (" + e.Acc.DisplayName + ")";
         }
 
         #endregion
