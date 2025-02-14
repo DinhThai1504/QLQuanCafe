@@ -19,8 +19,6 @@ namespace QLQuanCafe
             
         }
 
-       
-
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
             // Bạn có thể để trống hoặc thêm code tùy ý.

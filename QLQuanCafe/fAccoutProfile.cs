@@ -35,6 +35,8 @@ namespace QLQuanCafe
         public fAccountProfile()
         {
             InitializeComponent();
+           // this.LoginAccount = Account; // Gán tài khoản khi mở form
+           // ChangeAccount(Account);
         }
 
         void ChangeAccount(Account acc)
@@ -86,10 +88,6 @@ namespace QLQuanCafe
             UpdateAccountInfo();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 
     public class AccountEvent : EventArgs

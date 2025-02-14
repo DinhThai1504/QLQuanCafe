@@ -17,11 +17,13 @@ namespace QLQuanCafe
     {
         private Account LoginAccount;
 
-        public fTableManager()
+        public fTableManager(Account acc)
         {
             InitializeComponent();
             LoadTable();
             LoadCategory();
+
+            this.LoginAccount = acc;
         }
 
 
@@ -100,24 +102,14 @@ namespace QLQuanCafe
         }
 
 
-        private void đăngXuấtToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
 
         private void ADMINToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fAccountProfile f = new fAccountProfile(LoginAccount);
-            f.UpdateAccount += f_UpdateAccount;
+            fAdmin f = new fAdmin();
             f.ShowDialog();
         }
 
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fAccountProfile f = new fAccountProfile();
-            f.ShowDialog();
-
-        }
         void f_UpdateAccount(object sender, AccountEvent e)
         {
             ADMINToolStripMenuItem.Text = "Thông tin tài khoản (" + e.Acc.DisplayName + ")";
@@ -187,9 +179,20 @@ namespace QLQuanCafe
                 }
             }
         }
+
         #endregion
 
+        private void đăngXuấtToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        private void thôngTinCáNhânToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            fAccountProfile f = new fAccountProfile(LoginAccount);
+            f.UpdateAccount += f_UpdateAccount;
+            f.ShowDialog();
+        }
     }
 }
 
