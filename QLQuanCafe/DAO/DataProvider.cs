@@ -10,6 +10,17 @@ namespace QLQuanCafe.DAO
 {
     public class DataProvider
     {
+
+        private static DataProvider instance; // Ctrl + R + E
+
+        public static DataProvider Instance
+        {
+            get { if (instance == null) instance = new DataProvider(); return DataProvider.instance; }
+            private set { DataProvider.instance = value; }
+        }
+
+        private DataProvider() { }
+
         private string connectionSTR = "Data Source=LAPTOP-9R8TBQGU\\SQLEXPRESS;Initial Catalog=QuanLyQuanCafe;Integrated Security=True;";
 
 
@@ -59,13 +70,13 @@ namespace QLQuanCafe.DAO
 
                 if (parameter != null)
                 {
-                    string[] listPara = query.Split(' ');
+                    string[] listPara = query.Split(' '); // Lấy danh sách tham số trong query
                     int i = 0;
                     foreach (string item in listPara)
                     {
-                        if (item.Contains('@'))
+                        if (item.Contains("@")) // Kiểm tra nếu là tham số
                         {
-                            command.Parameters.AddWithValue(item, parameter[i]);
+                            command.Parameters.AddWithValue(item, parameter[i]); // Gán giá trị tham số
                             i++;
                         }
                     }

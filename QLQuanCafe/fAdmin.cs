@@ -16,18 +16,10 @@ namespace QLQuanCafe
         public fAdmin()
         {
             InitializeComponent();
-            LoadAccountList();
+            
         }
 
-        void LoadAccountList()
-        {
-
-            string query = "EXEC dbo.USP_GetAccountByUserName @userName";
-
-            DataProvider provider = new DataProvider();
-
-            dtgvAccount.DataSource = provider.ExecuteQuery(query, new object[] { "VINH" });
-        }
+       
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {

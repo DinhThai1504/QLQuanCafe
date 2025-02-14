@@ -183,14 +183,14 @@
             this.panel2.Controls.Add(this.dtpkFromDate);
             this.panel2.Location = new System.Drawing.Point(9, 13);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(917, 79);
+            this.panel2.Size = new System.Drawing.Size(917, 51);
             this.panel2.TabIndex = 2;
             // 
             // btnViewbill
             // 
             this.btnViewbill.Location = new System.Drawing.Point(392, 5);
             this.btnViewbill.Name = "btnViewbill";
-            this.btnViewbill.Size = new System.Drawing.Size(109, 59);
+            this.btnViewbill.Size = new System.Drawing.Size(101, 38);
             this.btnViewbill.TabIndex = 1;
             this.btnViewbill.Text = "Thống kê";
             this.btnViewbill.UseVisualStyleBackColor = true;
@@ -212,19 +212,19 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dtgvBill);
-            this.panel1.Location = new System.Drawing.Point(6, 98);
+            this.panel1.Location = new System.Drawing.Point(6, 70);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(920, 542);
+            this.panel1.Size = new System.Drawing.Size(920, 570);
             this.panel1.TabIndex = 1;
             // 
             // dtgvBill
             // 
             this.dtgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvBill.Location = new System.Drawing.Point(6, 3);
+            this.dtgvBill.Location = new System.Drawing.Point(3, 3);
             this.dtgvBill.Name = "dtgvBill";
             this.dtgvBill.RowHeadersWidth = 51;
             this.dtgvBill.RowTemplate.Height = 24;
-            this.dtgvBill.Size = new System.Drawing.Size(911, 524);
+            this.dtgvBill.Size = new System.Drawing.Size(911, 564);
             this.dtgvBill.TabIndex = 0;
             // 
             // tpFood
