@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLQuanCafe.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,18 @@ using System.Windows.Forms;
 
 namespace QLQuanCafe
 {
-    public partial class Form1 : Form
+    public partial class fAdmin : Form
     {
-        public Form1()
+        public fAdmin()
         {
             InitializeComponent();
+            
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            // Bạn có thể để trống hoặc thêm code tùy ý.
+        }
+
     }
 }
