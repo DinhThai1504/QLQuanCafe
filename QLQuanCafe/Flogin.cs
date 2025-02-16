@@ -56,7 +56,5 @@ namespace QLQuanCafe
                 e.Cancel = true;
             }
         }
-        
-
     }
 }

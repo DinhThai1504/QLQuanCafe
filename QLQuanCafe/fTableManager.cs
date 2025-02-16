@@ -15,19 +15,34 @@ namespace QLQuanCafe
 {
     public partial class fTableManager : Form
     {
-        private Account LoginAccount;
+        private Account loginAccount;
+
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; ChangeAccount(loginAccount.Type); }
+        }
 
         public fTableManager(Account acc)
         {
             InitializeComponent();
-            LoadTable();
-            LoadCategory();
 
             this.LoginAccount = acc;
+
+            LoadTable();
+            LoadCategory();
+            //LoadComboboxTable(cbSwitchTable);
+
         }
 
 
         #region Mehthod
+
+        void ChangeAccount(int type)
+        {
+            ADMINToolStripMenuItem.Enabled = type == 1;
+            thôngTinTàiKhoảnToolStripMenuItem.Text += " (" + LoginAccount.DisplayName + ")";
+        }
 
         void LoadCategory()
         {
@@ -192,6 +207,11 @@ namespace QLQuanCafe
             fAccountProfile f = new fAccountProfile(LoginAccount);
             f.UpdateAccount += f_UpdateAccount;
             f.ShowDialog();
+        }
+
+        private void btnChuyenban_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
