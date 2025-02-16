@@ -130,6 +130,10 @@ namespace QLQuanCafe
         private void ADMINToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fAdmin f = new fAdmin();
+            f.loginAccount = LoginAccount;
+            //f.InsertFood += f_InsertFood;
+            //f.DeleteFood += f_DeleteFood;
+            //f.UpdateFood += f_UpdateFood;
             f.ShowDialog();
         }
 
