@@ -195,17 +195,18 @@
             this.btnViewbill.TabIndex = 1;
             this.btnViewbill.Text = "Thống kê";
             this.btnViewbill.UseVisualStyleBackColor = true;
+            this.btnViewbill.Click += new System.EventHandler(this.btnViewbill_Click);
             // 
             // dtpkToDate
             // 
-            this.dtpkToDate.Location = new System.Drawing.Point(591, 21);
+            this.dtpkToDate.Location = new System.Drawing.Point(587, 11);
             this.dtpkToDate.Name = "dtpkToDate";
             this.dtpkToDate.Size = new System.Drawing.Size(256, 22);
             this.dtpkToDate.TabIndex = 0;
             // 
             // dtpkFromDate
             // 
-            this.dtpkFromDate.Location = new System.Drawing.Point(36, 21);
+            this.dtpkFromDate.Location = new System.Drawing.Point(27, 11);
             this.dtpkFromDate.Name = "dtpkFromDate";
             this.dtpkFromDate.Size = new System.Drawing.Size(255, 22);
             this.dtpkFromDate.TabIndex = 0;
@@ -220,6 +221,7 @@
             // 
             // dtgvBill
             // 
+            this.dtgvBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvBill.Location = new System.Drawing.Point(3, 3);
             this.dtgvBill.Name = "dtgvBill";

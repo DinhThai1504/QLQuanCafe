@@ -18,8 +18,8 @@ namespace QLQuanCafe.DAO
             private set { TableDAO.instance = value; }
         }
 
-        public static int TableWidth = 100;
-        public static int TableHeight = 100;
+        public static int TableWidth = 95;
+        public static int TableHeight = 95;
 
         private TableDAO() { }
 

@@ -209,12 +209,12 @@ namespace QLQuanCafe
                     table.Name, totalPrice, discount, finalTotalPrice),
                     "Xác nhận thanh toán", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
-                    BillDAO.Instance.CheckOut(idBill, discount);
-                  
+                    BillDAO.Instance.CheckOut(idBill, discount,(float)finalTotalPrice);
+                    LoadTable();
                 }
-                ShowBill(table.ID);
+                
 
-                LoadTable();
+                
             }
         }
 

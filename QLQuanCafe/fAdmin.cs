@@ -23,6 +23,8 @@ namespace QLQuanCafe
         {
             InitializeComponent();
             Load();
+            LoadListBillByDate(dtpkFromDate.Value, dtpkToDate.Value);
+            LoadDateTimePickerBill();
         }
 
         //List<Food> SearchFoodByName(string name)
@@ -50,12 +52,12 @@ namespace QLQuanCafe
             accountList.DataSource = AccountDAO.Instance.GetListAccount();
         }
 
-        //void LoadDateTimePickerBill()
-        //{
-        //    DateTime today = DateTime.Now;
-        //    dtpkFromDate.Value = new DateTime(today.Year, today.Month, 1);
-        //    dtpkToDate.Value = dtpkFromDate.Value.AddMonths(1).AddDays(-1);
-        //}
+        void LoadDateTimePickerBill()
+        {
+           DateTime today = DateTime.Now;
+           dtpkFromDate.Value = new DateTime(today.Year, today.Month, 1);
+           dtpkToDate.Value = dtpkFromDate.Value.AddMonths(1).AddDays(-1);
+        }
         //void LoadListBillByDate(DateTime checkIn, DateTime checkOut)
         //{
         //    dtgvBill.DataSource = BillDAO.Instance.GetBillListByDate(checkIn, checkOut);
@@ -184,6 +186,17 @@ namespace QLQuanCafe
             string userName = txbUserName.Text;
 
             ResetPass(userName);
+        }
+
+
+       void LoadListBillByDate(DateTime checkIn, DateTime checkOut)
+        {
+            dtgvBill.DataSource = BillDAO.Instance.GetBillListByDate(checkIn, checkOut);
+        }
+
+        private void btnViewbill_Click(object sender, EventArgs e)
+        {
+            LoadListBillByDate(dtpkFromDate.Value, dtpkToDate.Value);
         }
     }
 }

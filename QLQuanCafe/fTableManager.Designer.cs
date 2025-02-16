@@ -174,9 +174,9 @@
             // 
             this.btnAddFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnAddFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFood.Location = new System.Drawing.Point(352, 3);
+            this.btnAddFood.Location = new System.Drawing.Point(352, 0);
             this.btnAddFood.Name = "btnAddFood";
-            this.btnAddFood.Size = new System.Drawing.Size(113, 80);
+            this.btnAddFood.Size = new System.Drawing.Size(113, 86);
             this.btnAddFood.TabIndex = 1;
             this.btnAddFood.Text = "Thêm món";
             this.btnAddFood.UseVisualStyleBackColor = false;
