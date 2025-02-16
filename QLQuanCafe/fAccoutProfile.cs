@@ -15,7 +15,7 @@ namespace QLQuanCafe
     public partial class fAccountProfile : Form
     {
         
-            private Account loginAccount;
+            public Account loginAccount;
 
         //private object txbNewPassWord;
         //private object txbReEnterPassWord;
@@ -28,8 +28,8 @@ namespace QLQuanCafe
         public fAccountProfile(Account acc)
         {
             InitializeComponent();
-
-            LoginAccount = acc;
+            this.LoginAccount = acc;
+            ChangeAccount(acc);
         }
 
         public fAccountProfile()
@@ -44,6 +44,7 @@ namespace QLQuanCafe
             txbUserName.Text = LoginAccount.UserName;
             txbDisplayName.Text = LoginAccount.DisplayName;
         }
+
 
         void UpdateAccountInfo()
         {
