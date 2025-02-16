@@ -35,6 +35,10 @@ namespace QLQuanCafe
 
         }
 
+        public fTableManager()
+        {
+        }
+
 
         #region Mehthod
 
