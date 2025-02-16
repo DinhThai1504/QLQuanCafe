@@ -244,12 +244,12 @@ namespace QLQuanCafe
 
         
 
-        private void thôngtincánhânToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fAccountProfile f = new fAccountProfile();
+        //private void thôngtincánhânToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    fAccountProfile f = new fAccountProfile();
 
-            f.ShowDialog();
-        }
+        //    f.ShowDialog();
+        //}
         
 
     }
