@@ -73,10 +73,10 @@ namespace QLQuanCafe
                 switch (item.Status)
                 {
                     case "Trống":
-                        btn.BackColor = Color.Aqua;
+                        btn.BackColor = Color.Ivory;
                         break;
                     default:
-                        btn.BackColor = Color.Red;
+                        btn.BackColor = Color.Chocolate;
                         break;
                 }
 
@@ -114,10 +114,14 @@ namespace QLQuanCafe
             int tableID = ((sender as Button).Tag as Table).ID;
             lsvBill.Tag = (sender as Button).Tag;
             ShowBill(tableID);
+
         }
 
 
         
+
+        
+
 
         private void ADMINToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -125,13 +129,18 @@ namespace QLQuanCafe
             f.ShowDialog();
         }
 
+
         void f_UpdateAccount(object sender, AccountEvent e)
         {
             thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản (" + e.Acc.DisplayName + ")";
             //ADMINToolStripMenuItem.Text = "ADMIN";
         }
 
+
+
         #endregion
+
+
 
         private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -152,6 +161,7 @@ namespace QLQuanCafe
         void btnAddFood_Click(object sender, EventArgs e)
         {
 
+
             Table table = lsvBill.Tag as Table;
 
             int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(table.ID);
@@ -169,9 +179,11 @@ namespace QLQuanCafe
             }
 
             ShowBill(table.ID);
-
-            LoadTable();
         }
+
+       
+
+        
 
 
         private void btnCheckOut_Click(object sender, EventArgs e)
@@ -179,22 +191,28 @@ namespace QLQuanCafe
              Table table = lsvBill.Tag as Table;
 
             int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(table.ID);
+            
             int discount = (int)nmDiscount.Value;
 
-            double totalPrice = Convert.ToDouble(txbTotalPrice.Text.Split(',')[0]);
+            double totalPrice = Convert.ToDouble(txbTotalPrice.Text.Split('.')[0]);
+           
             double finalTotalPrice = totalPrice - (totalPrice / 100) * discount;
 
             if (idBill != -1)
             {
-                if (MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn cho bàn {0}\nTổng tiền - (Tổng tiền / 100) x Giảm giá\n=> {1} - ({1} / 100) x {2} = {3}", table.Name, totalPrice, discount, finalTotalPrice), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                if (MessageBox.Show(string.Format("Bạn có chắc chắn thanh toán hóa đơn cho bàn {0}?\nTổng tiền - (Tổng tiền / 100) x Giảm giá\n= {1} - ({1} / 100) x {2} = {3}",
+                    table.Name, totalPrice, discount, finalTotalPrice),
+                    "Xác nhận thanh toán", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     BillDAO.Instance.CheckOut(idBill, discount);
-                    ShowBill(table.ID);
-
-                    LoadTable();
+                  
                 }
+                ShowBill(table.ID);
+
+                LoadTable();
             }
         }
+
 
         #endregion
 
@@ -214,6 +232,19 @@ namespace QLQuanCafe
         {
 
         }
+
+
+        
+
+        private void thôngtincánhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fAccountProfile f = new fAccountProfile();
+
+            f.ShowDialog();
+        }
+        
+
     }
+
 }
 
