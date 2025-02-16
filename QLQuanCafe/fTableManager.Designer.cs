@@ -339,7 +339,7 @@
         private System.Windows.Forms.ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinCáNhânToolStripMenuItem;
 
-        private System.Windows.Forms.ToolStripMenuItem thộngTinTàiKhoảnToolStripMenuItem;
+        //private System.Windows.Forms.ToolStripMenuItem thộngTinTàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngtincánhânToolStripMenuItem;
 
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem1;
