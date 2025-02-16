@@ -127,7 +127,8 @@ namespace QLQuanCafe
 
         void f_UpdateAccount(object sender, AccountEvent e)
         {
-            ADMINToolStripMenuItem.Text = "Thông tin tài khoản (" + e.Acc.DisplayName + ")";
+            thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản (" + e.Acc.DisplayName + ")";
+            //ADMINToolStripMenuItem.Text = "ADMIN";
         }
 
         #endregion
