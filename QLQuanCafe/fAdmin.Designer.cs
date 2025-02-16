@@ -96,7 +96,6 @@
             this.btnDlmk = new System.Windows.Forms.Button();
             this.panel25 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
-            this.cbaccountType = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -111,6 +110,7 @@
             this.btnEditAccount = new System.Windows.Forms.Button();
             this.btnDeleteAccount = new System.Windows.Forms.Button();
             this.btnAddAccount = new System.Windows.Forms.Button();
+            this.txbAccountType = new System.Windows.Forms.TextBox();
             this.tcAdmin.SuspendLayout();
             this.tpBill.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -805,20 +805,12 @@
             // 
             // panel26
             // 
-            this.panel26.Controls.Add(this.cbaccountType);
             this.panel26.Controls.Add(this.label9);
+            this.panel26.Controls.Add(this.txbAccountType);
             this.panel26.Location = new System.Drawing.Point(3, 152);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(434, 52);
             this.panel26.TabIndex = 2;
-            // 
-            // cbaccountType
-            // 
-            this.cbaccountType.FormattingEnabled = true;
-            this.cbaccountType.Location = new System.Drawing.Point(171, 13);
-            this.cbaccountType.Name = "cbaccountType";
-            this.cbaccountType.Size = new System.Drawing.Size(249, 24);
-            this.cbaccountType.TabIndex = 1;
             // 
             // label9
             // 
@@ -925,6 +917,7 @@
             this.btnShowAccount.TabIndex = 0;
             this.btnShowAccount.Text = "Xem";
             this.btnShowAccount.UseVisualStyleBackColor = true;
+            this.btnShowAccount.Click += new System.EventHandler(this.btnShowAccount_Click);
             // 
             // btnEditAccount
             // 
@@ -952,6 +945,16 @@
             this.btnAddAccount.TabIndex = 0;
             this.btnAddAccount.Text = "Thêm";
             this.btnAddAccount.UseVisualStyleBackColor = true;
+            // 
+            // txbAccountType
+            // 
+            this.txbAccountType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbAccountType.Location = new System.Drawing.Point(171, 10);
+            this.txbAccountType.Multiline = true;
+            this.txbAccountType.Name = "txbAccountType";
+            this.txbAccountType.ReadOnly = true;
+            this.txbAccountType.Size = new System.Drawing.Size(249, 26);
+            this.txbAccountType.TabIndex = 1;
             // 
             // fAdmin
             // 
@@ -1101,6 +1104,6 @@
         private System.Windows.Forms.Button btnAddAccount;
         private System.Windows.Forms.ComboBox cbFoodCategory;
         private System.Windows.Forms.ComboBox cbTableStatus;
-        private System.Windows.Forms.ComboBox cbaccountType;
+        private System.Windows.Forms.TextBox txbAccountType;
     }
 }

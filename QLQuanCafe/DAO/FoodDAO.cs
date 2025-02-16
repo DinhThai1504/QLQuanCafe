@@ -33,5 +33,10 @@ namespace QLQuanCafe.DAO
             }
             return list;
         }
+        //public List<Food> GetListFood()
+        //{
+        //    // Code để lấy danh sách món ăn
+        //}
+
     }
 }
