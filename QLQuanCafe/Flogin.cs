@@ -12,9 +12,10 @@ using System.Windows.Forms;
 
 namespace QLQuanCafe
 {
-    public partial class Flogin : Form
+    public partial class flogin : Form
+
     {
-        public Flogin()
+        public flogin()
         {
             InitializeComponent();
         }
@@ -56,7 +57,5 @@ namespace QLQuanCafe
                 e.Cancel = true;
             }
         }
-        
-
     }
 }
