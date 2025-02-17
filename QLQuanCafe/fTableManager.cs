@@ -27,7 +27,7 @@ namespace QLQuanCafe
         {
             InitializeComponent();
 
-            this.LoginAccount = acc;
+            
 
             LoadTable();
             LoadCategory();
@@ -103,7 +103,6 @@ namespace QLQuanCafe
                 totalPrice += item.TotalPrice;
                 lsvBill.Items.Add(lsvItem);
             }
-
             CultureInfo culture = new CultureInfo("vi-VN");
             txbTotalPrice.Text = totalPrice.ToString("c",culture);
 
@@ -223,7 +222,7 @@ namespace QLQuanCafe
             this.Close();
         }
 
-        private void thôngTinCáNhânToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void ADMINToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             fAccountProfile f = new fAccountProfile(LoginAccount);
             f.UpdateAccount += f_UpdateAccount;
