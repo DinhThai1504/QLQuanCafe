@@ -31,7 +31,7 @@ namespace QLQuanCafe
 
             LoadTable();
             LoadCategory();
-            //LoadComboboxTable(cbSwitchTable);
+            LoadComboboxTable(cbSwitchTable);
 
         }
 
@@ -40,7 +40,7 @@ namespace QLQuanCafe
         }
 
 
-        #region Mehthod
+
 
         void ChangeAccount(int type)
         {
@@ -109,8 +109,15 @@ namespace QLQuanCafe
             
         }
 
+        void LoadComboboxTable(ComboBox cb)
+        {
+            cb.DataSource = TableDAO.Instance.LoadTableList();
+            cb.DisplayMember = "Name";
+        }
+
+
         #region Event
-        
+
 
         void btn_Click(object sender, EventArgs e)
         {
@@ -121,14 +128,14 @@ namespace QLQuanCafe
         }
 
 
-        
-
-        
-
 
         private void ADMINToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fAdmin f = new fAdmin();
+            f.loginAccount = LoginAccount;
+            //f.InsertFood += f_InsertFood;
+            //f.DeleteFood += f_DeleteFood;
+            //f.UpdateFood += f_UpdateFood;
             f.ShowDialog();
         }
 
@@ -136,12 +143,8 @@ namespace QLQuanCafe
         void f_UpdateAccount(object sender, AccountEvent e)
         {
             thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản (" + e.Acc.DisplayName + ")";
-            //ADMINToolStripMenuItem.Text = "ADMIN";
+            ADMINToolStripMenuItem.Text = "ADMIN";
         }
-
-
-
-        #endregion
 
 
 
@@ -185,9 +188,6 @@ namespace QLQuanCafe
             LoadTable();
         }
 
-       
-
-        
 
 
         private void btnCheckOut_Click(object sender, EventArgs e)
@@ -208,17 +208,14 @@ namespace QLQuanCafe
                     table.Name, totalPrice, discount, finalTotalPrice),
                     "Xác nhận thanh toán", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
-                    BillDAO.Instance.CheckOut(idBill, discount);
-                  
+                    BillDAO.Instance.CheckOut(idBill, discount,(float)finalTotalPrice);
+                    LoadTable();
                 }
-                ShowBill(table.ID);
+                
 
-                LoadTable();
+                
             }
         }
-
-
-        #endregion
 
         private void đăngXuấtToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -232,21 +229,37 @@ namespace QLQuanCafe
             f.ShowDialog();
         }
 
-        private void btnChuyenban_Click(object sender, EventArgs e)
-        {
 
+
+        private void btnSwitchTable_Click(object sender, EventArgs e)
+        {
+            int id1 = (lsvBill.Tag as Table).ID;
+
+            int id2 = (cbSwitchTable.SelectedItem as Table).ID;
+            if (MessageBox.Show(string.Format("Bạn có thật sự muốn chuyển bàn {0} qua bàn {1}", (lsvBill.Tag as Table).Name, (cbSwitchTable.SelectedItem as Table).Name), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            {
+                TableDAO.Instance.SwitchTable(id1, id2);
+
+                LoadTable();
+            }
         }
 
 
-        
+        #endregion
 
-        private void thôngtincánhânToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fAccountProfile f = new fAccountProfile();
 
-            f.ShowDialog();
-        }
-        
+
+
+
+
+
+        //private void thôngtincánhânToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    fAccountProfile f = new fAccountProfile();
+
+        //    f.ShowDialog();
+        //}
+
 
     }
 

@@ -46,9 +46,9 @@
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txbTotalPrice = new System.Windows.Forms.TextBox();
-            this.cbChuyenban = new System.Windows.Forms.ComboBox();
+            this.cbSwitchTable = new System.Windows.Forms.ComboBox();
             this.nmDiscount = new System.Windows.Forms.NumericUpDown();
-            this.btnChuyenban = new System.Windows.Forms.Button();
+            this.btnSwitchTable = new System.Windows.Forms.Button();
             this.btnGiamgia = new System.Windows.Forms.Button();
             this.btnCheckOut = new System.Windows.Forms.Button();
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
@@ -174,9 +174,9 @@
             // 
             this.btnAddFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnAddFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFood.Location = new System.Drawing.Point(352, 3);
+            this.btnAddFood.Location = new System.Drawing.Point(352, 0);
             this.btnAddFood.Name = "btnAddFood";
-            this.btnAddFood.Size = new System.Drawing.Size(113, 80);
+            this.btnAddFood.Size = new System.Drawing.Size(113, 86);
             this.btnAddFood.TabIndex = 1;
             this.btnAddFood.Text = "Thêm món";
             this.btnAddFood.UseVisualStyleBackColor = false;
@@ -202,9 +202,9 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.txbTotalPrice);
-            this.panel3.Controls.Add(this.cbChuyenban);
+            this.panel3.Controls.Add(this.cbSwitchTable);
             this.panel3.Controls.Add(this.nmDiscount);
-            this.panel3.Controls.Add(this.btnChuyenban);
+            this.panel3.Controls.Add(this.btnSwitchTable);
             this.panel3.Controls.Add(this.btnGiamgia);
             this.panel3.Controls.Add(this.btnCheckOut);
             this.panel3.Location = new System.Drawing.Point(580, 588);
@@ -224,13 +224,13 @@
             this.txbTotalPrice.Text = "0";
             this.txbTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // cbChuyenban
+            // cbSwitchTable
             // 
-            this.cbChuyenban.FormattingEnabled = true;
-            this.cbChuyenban.Location = new System.Drawing.Point(3, 56);
-            this.cbChuyenban.Name = "cbChuyenban";
-            this.cbChuyenban.Size = new System.Drawing.Size(138, 24);
-            this.cbChuyenban.TabIndex = 4;
+            this.cbSwitchTable.FormattingEnabled = true;
+            this.cbSwitchTable.Location = new System.Drawing.Point(3, 56);
+            this.cbSwitchTable.Name = "cbSwitchTable";
+            this.cbSwitchTable.Size = new System.Drawing.Size(138, 24);
+            this.cbSwitchTable.TabIndex = 4;
             // 
             // nmDiscount
             // 
@@ -240,20 +240,21 @@
             this.nmDiscount.TabIndex = 2;
             this.nmDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnChuyenban
+            // btnSwitchTable
             // 
-            this.btnChuyenban.BackColor = System.Drawing.Color.Olive;
-            this.btnChuyenban.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChuyenban.Location = new System.Drawing.Point(3, 8);
-            this.btnChuyenban.Name = "btnChuyenban";
-            this.btnChuyenban.Size = new System.Drawing.Size(138, 42);
-            this.btnChuyenban.TabIndex = 1;
-            this.btnChuyenban.Text = "Chuyển bàn";
-            this.btnChuyenban.UseVisualStyleBackColor = false;
-            this.btnChuyenban.Click += new System.EventHandler(this.btnChuyenban_Click);
+            this.btnSwitchTable.BackColor = System.Drawing.Color.Olive;
+            this.btnSwitchTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSwitchTable.Location = new System.Drawing.Point(3, 8);
+            this.btnSwitchTable.Name = "btnSwitchTable";
+            this.btnSwitchTable.Size = new System.Drawing.Size(138, 42);
+            this.btnSwitchTable.TabIndex = 1;
+            this.btnSwitchTable.Text = "Chuyển bàn";
+            this.btnSwitchTable.UseVisualStyleBackColor = false;
+            this.btnSwitchTable.Click += new System.EventHandler(this.btnSwitchTable_Click);
             // 
             // btnGiamgia
-            // 
+            //
+          
             this.btnGiamgia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnGiamgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGiamgia.Location = new System.Drawing.Point(184, 8);
@@ -319,7 +320,7 @@
         private System.Windows.Forms.ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinCáNhânToolStripMenuItem;
 
-        private System.Windows.Forms.ToolStripMenuItem thộngTinTàiKhoảnToolStripMenuItem;
+        //private System.Windows.Forms.ToolStripMenuItem thộngTinTàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngtincánhânToolStripMenuItem;
 
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem1;
@@ -330,9 +331,9 @@
         private System.Windows.Forms.ComboBox cbFood;
         private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ComboBox cbChuyenban;
+        private System.Windows.Forms.ComboBox cbSwitchTable;
         private System.Windows.Forms.NumericUpDown nmDiscount;
-        private System.Windows.Forms.Button btnChuyenban;
+        private System.Windows.Forms.Button btnSwitchTable;
         private System.Windows.Forms.Button btnGiamgia;
         private System.Windows.Forms.Button btnCheckOut;
         private System.Windows.Forms.ListView lsvBill;
