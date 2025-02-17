@@ -26,7 +26,8 @@ namespace QLQuanCafe.DTO
             if (dateCheckOutTemp.ToString() != "")
                 this.DateCheckOut = (DateTime?)dateCheckOutTemp;
             this.Status = (int)row["status"];
-            this.Discount = (int)row["discount"];
+            this.Discount = row["discount"] != DBNull.Value ? Convert.ToInt32(row["discount"]) : 0;
+
         }
 
         private int discount;
