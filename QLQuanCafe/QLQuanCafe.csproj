@@ -73,11 +73,11 @@
     <Compile Include="fAdmin.Designer.cs">
       <DependentUpon>fAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Flogin.cs">
+    <Compile Include="flogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Flogin.Designer.cs">
-      <DependentUpon>Flogin.cs</DependentUpon>
+    <Compile Include="flogin.Designer.cs">
+      <DependentUpon>flogin.cs</DependentUpon>
     </Compile>
     <Compile Include="fTableManager.cs">
       <SubType>Form</SubType>
@@ -93,8 +93,8 @@
     <EmbeddedResource Include="fAdmin.resx">
       <DependentUpon>fAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Flogin.resx">
-      <DependentUpon>Flogin.cs</DependentUpon>
+    <EmbeddedResource Include="flogin.resx">
+      <DependentUpon>flogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fTableManager.resx">
       <DependentUpon>fTableManager.cs</DependentUpon>
