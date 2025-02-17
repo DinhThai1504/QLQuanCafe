@@ -20,7 +20,7 @@ namespace QLQuanCafe
             InitializeComponent();
             Load();
         }
-
+        //
         #region methods
         List<Food> SearchFoodByName(string name)
         {
