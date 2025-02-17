@@ -543,10 +543,3 @@ UPDATE Bill SET [discount] = @Discount WHERE id = @id
 
 select * from dbo.Bill
 
---Thêm đồ uống, ăn
-INSERT dbo.Food
-	(name, idCategory, price)
-values (N'',--name, nvarchar(100)
-		0, --idCategory, int
-		0.0 --price, float
-		)

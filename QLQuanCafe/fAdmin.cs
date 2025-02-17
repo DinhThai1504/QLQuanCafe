@@ -22,8 +22,13 @@ namespace QLQuanCafe
         }
 
         #region methods
+        List<Food> SearchFoodByName(string name)
+        {
+            List<Food> listFood = FoodDAO.Instance.SearchFoodByName(name);
 
-        void Load()
+            return listFood;
+        }
+            void Load()
         {
             LoadDateTimePickerBill();
             //LoadListBillByDate(dtpkFromDate.Value, dtpkToDate.Value);
@@ -73,7 +78,7 @@ namespace QLQuanCafe
         {
             LoadListFood();
         }
-
+        
         private void txbFoodID_TextChanged(object sender, EventArgs e)
         {
             if (dtgvFood.SelectedCells.Count > 0)
@@ -99,7 +104,10 @@ namespace QLQuanCafe
                 cbFoodCategory.SelectedIndex = index;
             }
         }
-
+        private void btnTimkiem_Click(object sender, EventArgs e)
+        {
+            dtgvFood.DataSource = SearchFoodByName(txbSearchFoodName.Text);
+        }
         private void btnAddFood_Click(object sender, EventArgs e)
         {
             string name = txbFoodName.Text;
@@ -155,5 +163,7 @@ namespace QLQuanCafe
                 MessageBox.Show("Có lỗi khi xóa thức ăn");
             }
         }
+
+        
     }
 }
