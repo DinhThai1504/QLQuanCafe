@@ -1,6 +1,6 @@
 ﻿namespace QLQuanCafe
 {
-    partial class Flogin
+    partial class flogin
     {
         /// <summary>
         /// Required designer variable.
