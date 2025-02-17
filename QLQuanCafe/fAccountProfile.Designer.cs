@@ -229,13 +229,17 @@
             this.AcceptButton = this.btnUpdate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.CancelButton = this.btnExti;
-            this.ClientSize = new System.Drawing.Size(577, 369);
+            this.ClientSize = new System.Drawing.Size(564, 364);
             this.Controls.Add(this.btnExti);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
+
+            this.ClientSize = new System.Drawing.Size(660, 474);
+
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(4);

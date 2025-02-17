@@ -39,6 +39,7 @@ namespace QLQuanCafe.DAO
         public void InsertBillInfo(int idBill, int idFood, int count)
         {
             DataProvider.Instance.ExecuteNonQuery("USP_InsertBillInfo @idBill , @idFood , @count", new object[] { idBill, idFood, count });
+            
         }
     }
 }
