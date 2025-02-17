@@ -361,7 +361,6 @@
             this.txbFoodName.Location = new System.Drawing.Point(148, 12);
             this.txbFoodName.Multiline = true;
             this.txbFoodName.Name = "txbFoodName";
-            this.txbFoodName.ReadOnly = true;
             this.txbFoodName.Size = new System.Drawing.Size(269, 26);
             this.txbFoodName.TabIndex = 1;
             // 
@@ -423,6 +422,7 @@
             this.btnEditFood.TabIndex = 0;
             this.btnEditFood.Text = "Sửa";
             this.btnEditFood.UseVisualStyleBackColor = true;
+            this.btnEditFood.Click += new System.EventHandler(this.btnEditFood_Click);
             // 
             // btnDeleteFood
             // 
@@ -432,6 +432,7 @@
             this.btnDeleteFood.TabIndex = 0;
             this.btnDeleteFood.Text = "Xóa";
             this.btnDeleteFood.UseVisualStyleBackColor = true;
+            this.btnDeleteFood.Click += new System.EventHandler(this.btnDeleteFood_Click);
             // 
             // btnAddFood
             // 
@@ -441,6 +442,7 @@
             this.btnAddFood.TabIndex = 0;
             this.btnAddFood.Text = "Thêm";
             this.btnAddFood.UseVisualStyleBackColor = true;
+            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
             // panel3
             // 
