@@ -33,5 +33,18 @@ namespace QLQuanCafe.DAO
             }
             return list;
         }
+
+        public List<Food> GetListFood()
+        {
+            List<Food> list = new List<Food>();
+            string query = "SELECT * FROM Food";
+            System.Data.DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (System.Data.DataRow item in data.Rows)
+            {
+                Food food = new Food(item);
+                list.Add(food);
+            }
+            return list;
+        }
     }
 }

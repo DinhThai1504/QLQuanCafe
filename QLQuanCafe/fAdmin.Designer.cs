@@ -380,9 +380,9 @@
             this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblId.Location = new System.Drawing.Point(3, 15);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(144, 25);
+            this.lblId.Size = new System.Drawing.Size(40, 25);
             this.lblId.TabIndex = 0;
-            this.lblId.Text = "ID Sản phẩm:";
+            this.lblId.Text = "ID:";
             // 
             // txbFoodID
             // 
@@ -393,6 +393,7 @@
             this.txbFoodID.ReadOnly = true;
             this.txbFoodID.Size = new System.Drawing.Size(269, 26);
             this.txbFoodID.TabIndex = 1;
+            this.txbFoodID.TextChanged += new System.EventHandler(this.txbFoodID_TextChanged);
             // 
             // panel4
             // 
@@ -404,7 +405,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(468, 90);
             this.panel4.TabIndex = 1;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // btnShowFood
             // 
