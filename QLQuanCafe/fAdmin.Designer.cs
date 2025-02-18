@@ -269,6 +269,7 @@
             this.btnTimkiem.TabIndex = 0;
             this.btnTimkiem.Text = "Tìm kiếm";
             this.btnTimkiem.UseVisualStyleBackColor = true;
+            this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
             // 
             // panel5
             // 
@@ -364,7 +365,6 @@
             this.txbFoodName.Location = new System.Drawing.Point(148, 12);
             this.txbFoodName.Multiline = true;
             this.txbFoodName.Name = "txbFoodName";
-            this.txbFoodName.ReadOnly = true;
             this.txbFoodName.Size = new System.Drawing.Size(269, 26);
             this.txbFoodName.TabIndex = 1;
             // 
@@ -383,9 +383,9 @@
             this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblId.Location = new System.Drawing.Point(3, 15);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(144, 25);
+            this.lblId.Size = new System.Drawing.Size(40, 25);
             this.lblId.TabIndex = 0;
-            this.lblId.Text = "ID Sản phẩm:";
+            this.lblId.Text = "ID:";
             // 
             // txbFoodID
             // 
@@ -396,6 +396,7 @@
             this.txbFoodID.ReadOnly = true;
             this.txbFoodID.Size = new System.Drawing.Size(269, 26);
             this.txbFoodID.TabIndex = 1;
+            this.txbFoodID.TextChanged += new System.EventHandler(this.txbFoodID_TextChanged);
             // 
             // panel4
             // 
@@ -426,6 +427,7 @@
             this.btnEditFood.TabIndex = 0;
             this.btnEditFood.Text = "Sửa";
             this.btnEditFood.UseVisualStyleBackColor = true;
+            this.btnEditFood.Click += new System.EventHandler(this.btnEditFood_Click);
             // 
             // btnDeleteFood
             // 
@@ -435,6 +437,7 @@
             this.btnDeleteFood.TabIndex = 0;
             this.btnDeleteFood.Text = "Xóa";
             this.btnDeleteFood.UseVisualStyleBackColor = true;
+            this.btnDeleteFood.Click += new System.EventHandler(this.btnDeleteFood_Click_1);
             // 
             // btnAddFood
             // 
@@ -444,6 +447,7 @@
             this.btnAddFood.TabIndex = 0;
             this.btnAddFood.Text = "Thêm";
             this.btnAddFood.UseVisualStyleBackColor = true;
+            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
             // panel3
             // 
