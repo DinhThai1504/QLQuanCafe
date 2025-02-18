@@ -17,8 +17,7 @@ namespace QLQuanCafe
         
             private Account loginAccount;
 
-        //private object txbNewPassWord;
-        //private object txbReEnterPassWord;
+        
 
         public Account LoginAccount
         {
@@ -35,8 +34,7 @@ namespace QLQuanCafe
         public fAccountProfile()
         {
             InitializeComponent();
-           // this.LoginAccount = Account; // Gán tài khoản khi mở form
-           // ChangeAccount(Account);
+          
         }
 
         void ChangeAccount(Account acc)

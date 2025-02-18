@@ -102,12 +102,14 @@ namespace QLQuanCafe
                 lsvItem.SubItems.Add(item.TotalPrice.ToString());
                 totalPrice += item.TotalPrice;
                 lsvBill.Items.Add(lsvItem);
+                LoadTable();
+
             }
 
             CultureInfo culture = new CultureInfo("vi-VN");
             txbTotalPrice.Text = totalPrice.ToString("c",culture);
 
-            
+           
         }
 
         void LoadComboboxTable(ComboBox cb)
@@ -134,9 +136,7 @@ namespace QLQuanCafe
         {
             fAdmin f = new fAdmin();
             f.loginAccount = LoginAccount;
-            //f.InsertFood += f_InsertFood;
-            //f.DeleteFood += f_DeleteFood;
-            //f.UpdateFood += f_UpdateFood;
+        
             f.ShowDialog();
         }
 
@@ -186,6 +186,7 @@ namespace QLQuanCafe
             }
 
             ShowBill(table.ID);
+
             LoadTable();
         }
 
@@ -212,9 +213,6 @@ namespace QLQuanCafe
                     BillDAO.Instance.CheckOut(idBill, discount,(float)finalTotalPrice);
                     LoadTable();
                 }
-                
-
-                
             }
         }
 
@@ -248,18 +246,6 @@ namespace QLQuanCafe
 
         #endregion
 
-
-
-
-
-
-
-        //private void thôngtincánhânToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    fAccountProfile f = new fAccountProfile();
-
-        //    f.ShowDialog();
-        //}
 
 
     }
