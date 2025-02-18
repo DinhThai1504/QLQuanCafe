@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 
 namespace QLQuanCafe
@@ -24,7 +25,7 @@ namespace QLQuanCafe
             InitializeComponent();
             Load();
             LoadListBillByDate(dtpkFromDate.Value, dtpkToDate.Value);
-            LoadDateTimePickerBill();
+            LoadDateTimePickerBill();          
         }
         List<Food> SearchFoodByName(string name)
         {
@@ -36,8 +37,6 @@ namespace QLQuanCafe
         {
             dtgvFood.DataSource = foodList;
             dtgvAccount.DataSource = accountList;
-
-
             LoadAccount();
             LoadListFood();
             AddFoodBinding();
@@ -136,6 +135,7 @@ namespace QLQuanCafe
             numericUpDown1.DataBindings.Add(new Binding("Value", dtgvAccount.DataSource, "Type", true, DataSourceUpdateMode.Never));
         }
 
+      
         //--------
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
@@ -225,8 +225,7 @@ namespace QLQuanCafe
             {
                 MessageBox.Show("Thêm món thành công");
                 LoadListFood();
-                /*if (insertFood != null)
-                    insertFood(this, new EventArgs());*/
+                
             }
             else
             {
@@ -246,8 +245,7 @@ namespace QLQuanCafe
                 {
                     MessageBox.Show("Sửa món thành công");
                     LoadListFood();
-                    /*if (updateFood != null)
-                        updateFood(this, new EventArgs());*/
+                   
                 }
                 else
                 {
@@ -263,8 +261,7 @@ namespace QLQuanCafe
             {
                 MessageBox.Show("Xóa món thành công");
                 LoadListFood();
-                /*if (deleteFood != null)
-                    deleteFood(this, new EventArgs());*/
+                
             }
             else
             {
@@ -280,8 +277,7 @@ namespace QLQuanCafe
             {
                 MessageBox.Show("Xóa món thành công");
                 LoadListFood();
-                /*if (deleteFood != null)
-                    deleteFood(this, new EventArgs());*/
+                
             }
             else
             {
@@ -289,9 +285,17 @@ namespace QLQuanCafe
             }
         }
 
+      
+
+
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
             dtgvFood.DataSource = SearchFoodByName(txbSearchFoodName.Text);
         }
+
+
+      
+
+
     }
 }

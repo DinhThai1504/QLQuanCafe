@@ -43,5 +43,7 @@ namespace QLQuanCafe.DAO
             DataProvider.Instance.ExecuteQuery("USP_SwitchTabel @idTable1 , @idTabel2", new object[] { id1, id2 });
         }
 
+        
+
     }
 }

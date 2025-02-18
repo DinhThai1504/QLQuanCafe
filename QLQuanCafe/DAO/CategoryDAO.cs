@@ -37,7 +37,7 @@ namespace QLQuanCafe.DAO
         {
             Category category = null;
 
-            string query = "select * from FoodCategory where id = " + id;
+            string query = "select * from FoodCategory";
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -49,6 +49,22 @@ namespace QLQuanCafe.DAO
 
             return category;
         }
+
+      public List<Category> GetCategories()
+        {
+            List<Category> list = new List<Category>();
+            string query = "SELECT * FROM FoodCategory";
+            System.Data.DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (System.Data.DataRow item in data.Rows)
+            {
+                Category category = new Category(item);
+                list.Add(category);
+            }
+            return list;
+        }
+
+ 
+
     }
 }
 

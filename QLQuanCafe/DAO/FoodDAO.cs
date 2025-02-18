@@ -86,5 +86,10 @@ namespace QLQuanCafe.DAO
 
             return list;
         }
+
+        internal object GetCategories()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
