@@ -1,4 +1,5 @@
-﻿using QLQuanCafe.DAO;
+﻿using Microsoft.Reporting.WinForms;
+using QLQuanCafe.DAO;
 using QLQuanCafe.DTO;
 using System;
 using System.Collections.Generic;
@@ -42,6 +43,7 @@ namespace QLQuanCafe
             AddFoodBinding();
             LoadCategoryIntoCombobox(cbFoodCategory);
             AddAccountBinding();
+           
         }
 
         void LoadAccount()
@@ -334,6 +336,23 @@ namespace QLQuanCafe
                 page++;
 
             txbPageBill.Text = page.ToString();
+        }
+
+        private void fAdmin_Load(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+           FormReport formReport = new FormReport();
+            formReport.ShowDialog();
         }
     }
 }

@@ -21,7 +21,7 @@ namespace QLQuanCafe.DAO
 
         private DataProvider() { }
 
-        private string connectionSTR = "Data Source=MIN-YOONGI\\MSSQLSERVER01;Initial Catalog=QuanLyQuanCafe;Integrated Security=True;TrustServerCertificate=True;";
+        private string connectionSTR = "Data Source=THUYVY;Initial Catalog=QuanLyQuanCafe;Integrated Security=True;TrustServerCertificate=True;";
 
 
 
