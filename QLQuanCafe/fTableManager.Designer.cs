@@ -68,7 +68,7 @@
             this.thôngTinTàiKhoảnToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1145, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1142, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -154,13 +154,14 @@
             this.panel4.Controls.Add(this.cbCategory);
             this.panel4.Location = new System.Drawing.Point(580, 496);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(550, 86);
+            this.panel4.Size = new System.Drawing.Size(550, 71);
             this.panel4.TabIndex = 5;
             // 
             // nmFoodCount
             // 
             this.nmFoodCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.nmFoodCount.Location = new System.Drawing.Point(471, 34);
+            this.nmFoodCount.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.nmFoodCount.Location = new System.Drawing.Point(351, 3);
             this.nmFoodCount.Minimum = new decimal(new int[] {
             100,
             0,
@@ -177,11 +178,12 @@
             // 
             // btnAddFood
             // 
-            this.btnAddFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnAddFood.BackColor = System.Drawing.Color.Beige;
             this.btnAddFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFood.Location = new System.Drawing.Point(352, 0);
+            this.btnAddFood.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnAddFood.Location = new System.Drawing.Point(430, 0);
             this.btnAddFood.Name = "btnAddFood";
-            this.btnAddFood.Size = new System.Drawing.Size(113, 86);
+            this.btnAddFood.Size = new System.Drawing.Size(116, 57);
             this.btnAddFood.TabIndex = 1;
             this.btnAddFood.Text = "Thêm món";
             this.btnAddFood.UseVisualStyleBackColor = false;
@@ -189,14 +191,16 @@
             // 
             // cbFood
             // 
+            this.cbFood.ForeColor = System.Drawing.Color.SaddleBrown;
             this.cbFood.FormattingEnabled = true;
-            this.cbFood.Location = new System.Drawing.Point(3, 59);
+            this.cbFood.Location = new System.Drawing.Point(3, 33);
             this.cbFood.Name = "cbFood";
             this.cbFood.Size = new System.Drawing.Size(343, 24);
             this.cbFood.TabIndex = 0;
             // 
             // cbCategory
             // 
+            this.cbCategory.ForeColor = System.Drawing.Color.SaddleBrown;
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Location = new System.Drawing.Point(3, 3);
             this.cbCategory.Name = "cbCategory";
@@ -212,46 +216,49 @@
             this.panel3.Controls.Add(this.btnSwitchTable);
             this.panel3.Controls.Add(this.btnGiamgia);
             this.panel3.Controls.Add(this.btnCheckOut);
-            this.panel3.Location = new System.Drawing.Point(580, 588);
+            this.panel3.Location = new System.Drawing.Point(580, 559);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(550, 108);
+            this.panel3.Size = new System.Drawing.Size(550, 130);
             this.panel3.TabIndex = 6;
             // 
             // txbTotalPrice
             // 
-            this.txbTotalPrice.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTotalPrice.Location = new System.Drawing.Point(306, 8);
+            this.txbTotalPrice.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbTotalPrice.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.txbTotalPrice.Location = new System.Drawing.Point(322, 5);
             this.txbTotalPrice.Multiline = true;
             this.txbTotalPrice.Name = "txbTotalPrice";
             this.txbTotalPrice.ReadOnly = true;
-            this.txbTotalPrice.Size = new System.Drawing.Size(241, 42);
+            this.txbTotalPrice.Size = new System.Drawing.Size(225, 57);
             this.txbTotalPrice.TabIndex = 5;
             this.txbTotalPrice.Text = "0";
             this.txbTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // cbSwitchTable
             // 
+            this.cbSwitchTable.ForeColor = System.Drawing.Color.SaddleBrown;
             this.cbSwitchTable.FormattingEnabled = true;
             this.cbSwitchTable.Location = new System.Drawing.Point(3, 56);
             this.cbSwitchTable.Name = "cbSwitchTable";
-            this.cbSwitchTable.Size = new System.Drawing.Size(138, 24);
+            this.cbSwitchTable.Size = new System.Drawing.Size(152, 24);
             this.cbSwitchTable.TabIndex = 4;
             // 
             // nmDiscount
             // 
-            this.nmDiscount.Location = new System.Drawing.Point(184, 58);
+            this.nmDiscount.Location = new System.Drawing.Point(161, 56);
             this.nmDiscount.Name = "nmDiscount";
-            this.nmDiscount.Size = new System.Drawing.Size(102, 22);
+            this.nmDiscount.Size = new System.Drawing.Size(155, 22);
             this.nmDiscount.TabIndex = 2;
             this.nmDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnSwitchTable
             // 
-            this.btnSwitchTable.BackColor = System.Drawing.Color.Olive;
+            this.btnSwitchTable.BackColor = System.Drawing.Color.Beige;
             this.btnSwitchTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSwitchTable.Location = new System.Drawing.Point(3, 8);
+            this.btnSwitchTable.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnSwitchTable.Location = new System.Drawing.Point(0, 0);
             this.btnSwitchTable.Name = "btnSwitchTable";
-            this.btnSwitchTable.Size = new System.Drawing.Size(138, 42);
+            this.btnSwitchTable.Size = new System.Drawing.Size(155, 43);
             this.btnSwitchTable.TabIndex = 1;
             this.btnSwitchTable.Text = "Chuyển bàn";
             this.btnSwitchTable.UseVisualStyleBackColor = false;
@@ -259,22 +266,24 @@
             // 
             // btnGiamgia
             // 
-            this.btnGiamgia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnGiamgia.BackColor = System.Drawing.Color.Beige;
             this.btnGiamgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGiamgia.Location = new System.Drawing.Point(184, 8);
+            this.btnGiamgia.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnGiamgia.Location = new System.Drawing.Point(161, 0);
             this.btnGiamgia.Name = "btnGiamgia";
-            this.btnGiamgia.Size = new System.Drawing.Size(102, 44);
+            this.btnGiamgia.Size = new System.Drawing.Size(155, 44);
             this.btnGiamgia.TabIndex = 1;
             this.btnGiamgia.Text = "Giảm giá";
             this.btnGiamgia.UseVisualStyleBackColor = false;
             // 
             // btnCheckOut
             // 
-            this.btnCheckOut.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCheckOut.BackColor = System.Drawing.Color.DarkOrange;
             this.btnCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckOut.Location = new System.Drawing.Point(306, 54);
+            this.btnCheckOut.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnCheckOut.Location = new System.Drawing.Point(322, 68);
             this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(241, 44);
+            this.btnCheckOut.Size = new System.Drawing.Size(225, 48);
             this.btnCheckOut.TabIndex = 1;
             this.btnCheckOut.Text = "Thanh toán";
             this.btnCheckOut.UseVisualStyleBackColor = false;
@@ -285,7 +294,7 @@
             this.flpTable.AutoScroll = true;
             this.flpTable.Location = new System.Drawing.Point(12, 34);
             this.flpTable.Name = "flpTable";
-            this.flpTable.Size = new System.Drawing.Size(562, 662);
+            this.flpTable.Size = new System.Drawing.Size(562, 655);
             this.flpTable.TabIndex = 7;
             // 
             // fTableManager
@@ -293,7 +302,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(1145, 701);
+            this.ClientSize = new System.Drawing.Size(1142, 689);
             this.Controls.Add(this.flpTable);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
@@ -302,7 +311,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "fTableManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Phần mềm quản lý quán caffe";
+            this.Text = "Phần mềm quản lý quán cà phê";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);

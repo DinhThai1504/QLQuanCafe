@@ -56,5 +56,10 @@ namespace QLQuanCafe
                 e.Cancel = true;
             }
         }
+
+        private void Flogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

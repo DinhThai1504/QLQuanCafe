@@ -51,7 +51,7 @@ namespace QLQuanCafe
         private DataTable GetData()
         {
             DataTable dt = new DataTable();
-            string connectionString = "Data Source=THUYVY;Initial Catalog=QuanLyQuanCafe;Integrated Security=True;TrustServerCertificate=True";
+            string connectionString = "Data Source=CONGVINH\\SQLEXPRESS;Initial Catalog=QuanLyQuanCafe;Integrated Security=True;TrustServerCertificate=True";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {

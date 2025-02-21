@@ -180,6 +180,15 @@
     <None Include="Resources\OIP %281%29.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\logomoi.jpg" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\padlock.png" />
+    <None Include="Resources\door-key.png" />
+    <None Include="Resources\door-key1.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\padlock1.png" />
+    <None Include="Resources\lock.png" />
+    <None Include="Resources\lock %281%29.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

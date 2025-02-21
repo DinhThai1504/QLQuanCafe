@@ -54,6 +54,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Beige;
             this.panel2.Controls.Add(this.txbUserName);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(16, 15);
@@ -64,26 +65,29 @@
             // 
             // txbUserName
             // 
-            this.txbUserName.Location = new System.Drawing.Point(185, 12);
+            this.txbUserName.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txbUserName.Location = new System.Drawing.Point(151, 14);
             this.txbUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txbUserName.Name = "txbUserName";
             this.txbUserName.ReadOnly = true;
-            this.txbUserName.Size = new System.Drawing.Size(335, 22);
+            this.txbUserName.Size = new System.Drawing.Size(369, 22);
             this.txbUserName.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.ForeColor = System.Drawing.Color.SaddleBrown;
             this.label1.Location = new System.Drawing.Point(4, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 24);
+            this.label1.Size = new System.Drawing.Size(139, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên đăng nhập:";
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Beige;
             this.panel1.Controls.Add(this.txbDisplayName);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(16, 76);
@@ -94,25 +98,28 @@
             // 
             // txbDisplayName
             // 
-            this.txbDisplayName.Location = new System.Drawing.Point(185, 12);
+            this.txbDisplayName.Location = new System.Drawing.Point(151, 12);
             this.txbDisplayName.Margin = new System.Windows.Forms.Padding(4);
             this.txbDisplayName.Name = "txbDisplayName";
-            this.txbDisplayName.Size = new System.Drawing.Size(335, 22);
+            this.txbDisplayName.Size = new System.Drawing.Size(369, 22);
             this.txbDisplayName.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.BackColor = System.Drawing.Color.Beige;
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.ForeColor = System.Drawing.Color.SaddleBrown;
             this.label2.Location = new System.Drawing.Point(4, 11);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 24);
+            this.label2.Size = new System.Drawing.Size(115, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên hiển thị:";
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Beige;
             this.panel3.Controls.Add(this.txbPassWord);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(16, 138);
@@ -123,26 +130,28 @@
             // 
             // txbPassWord
             // 
-            this.txbPassWord.Location = new System.Drawing.Point(185, 12);
+            this.txbPassWord.Location = new System.Drawing.Point(151, 12);
             this.txbPassWord.Margin = new System.Windows.Forms.Padding(4);
             this.txbPassWord.Name = "txbPassWord";
-            this.txbPassWord.Size = new System.Drawing.Size(335, 22);
+            this.txbPassWord.Size = new System.Drawing.Size(369, 22);
             this.txbPassWord.TabIndex = 1;
             this.txbPassWord.UseSystemPasswordChar = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.ForeColor = System.Drawing.Color.SaddleBrown;
             this.label3.Location = new System.Drawing.Point(4, 11);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 24);
+            this.label3.Size = new System.Drawing.Size(97, 24);
             this.label3.TabIndex = 0;
             this.label3.Text = "Mật khẩu:";
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.Beige;
             this.panel4.Controls.Add(this.txbNewPass);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(16, 199);
@@ -153,26 +162,28 @@
             // 
             // txbNewPass
             // 
-            this.txbNewPass.Location = new System.Drawing.Point(185, 12);
+            this.txbNewPass.Location = new System.Drawing.Point(151, 12);
             this.txbNewPass.Margin = new System.Windows.Forms.Padding(4);
             this.txbNewPass.Name = "txbNewPass";
-            this.txbNewPass.Size = new System.Drawing.Size(335, 22);
+            this.txbNewPass.Size = new System.Drawing.Size(369, 22);
             this.txbNewPass.TabIndex = 1;
             this.txbNewPass.UseSystemPasswordChar = true;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.ForeColor = System.Drawing.Color.SaddleBrown;
             this.label4.Location = new System.Drawing.Point(4, 11);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(146, 24);
+            this.label4.Size = new System.Drawing.Size(136, 24);
             this.label4.TabIndex = 0;
             this.label4.Text = "Mật khẩu mới:";
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.Beige;
             this.panel5.Controls.Add(this.txbReEnterPass);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Location = new System.Drawing.Point(16, 261);
@@ -183,45 +194,50 @@
             // 
             // txbReEnterPass
             // 
-            this.txbReEnterPass.Location = new System.Drawing.Point(185, 12);
+            this.txbReEnterPass.Location = new System.Drawing.Point(151, 12);
             this.txbReEnterPass.Margin = new System.Windows.Forms.Padding(4);
             this.txbReEnterPass.Name = "txbReEnterPass";
-            this.txbReEnterPass.Size = new System.Drawing.Size(335, 22);
+            this.txbReEnterPass.Size = new System.Drawing.Size(369, 22);
             this.txbReEnterPass.TabIndex = 1;
             this.txbReEnterPass.UseSystemPasswordChar = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.ForeColor = System.Drawing.Color.SaddleBrown;
             this.label5.Location = new System.Drawing.Point(4, 11);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 24);
+            this.label5.Size = new System.Drawing.Size(86, 24);
             this.label5.TabIndex = 0;
             this.label5.Text = "Nhập lại:";
             // 
             // btnUpdate
             // 
+            this.btnUpdate.BackColor = System.Drawing.Color.Beige;
+            this.btnUpdate.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(329, 322);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 28);
             this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Text = "Cập nhật";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnExti
             // 
+            this.btnExti.BackColor = System.Drawing.Color.Beige;
             this.btnExti.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExti.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExti.Location = new System.Drawing.Point(437, 322);
             this.btnExti.Margin = new System.Windows.Forms.Padding(4);
             this.btnExti.Name = "btnExti";
             this.btnExti.Size = new System.Drawing.Size(100, 28);
             this.btnExti.TabIndex = 7;
             this.btnExti.Text = "Thoát";
-            this.btnExti.UseVisualStyleBackColor = true;
+            this.btnExti.UseVisualStyleBackColor = false;
             this.btnExti.Click += new System.EventHandler(this.btnExti_Click);
             // 
             // fAccountProfile
@@ -229,8 +245,9 @@
             this.AcceptButton = this.btnUpdate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Tan;
             this.CancelButton = this.btnExti;
-            this.ClientSize = new System.Drawing.Size(577, 369);
+            this.ClientSize = new System.Drawing.Size(558, 369);
             this.Controls.Add(this.btnExti);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.panel5);
@@ -238,6 +255,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.ForeColor = System.Drawing.Color.SaddleBrown;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fAccountProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

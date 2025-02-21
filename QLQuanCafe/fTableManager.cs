@@ -102,14 +102,12 @@ namespace QLQuanCafe
                 lsvItem.SubItems.Add(item.TotalPrice.ToString());
                 totalPrice += item.TotalPrice;
                 lsvBill.Items.Add(lsvItem);
-                LoadTable();
-
             }
 
             CultureInfo culture = new CultureInfo("vi-VN");
             txbTotalPrice.Text = totalPrice.ToString("c",culture);
 
-           
+            LoadTable();
         }
 
         void LoadComboboxTable(ComboBox cb)
@@ -174,6 +172,7 @@ namespace QLQuanCafe
             int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(table.ID);
             int foodID = (cbFood.SelectedItem as Food).ID;
             int count = (int)nmFoodCount.Value;
+            string tenMon = cbFood.SelectedItem.ToString();
 
             if (idBill == -1)
             {
@@ -194,7 +193,8 @@ namespace QLQuanCafe
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
-             Table table = lsvBill.Tag as Table;
+            lsvBill.Items.Clear();
+            Table table = lsvBill.Tag as Table;
 
             int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(table.ID);
             
@@ -213,7 +213,10 @@ namespace QLQuanCafe
                     BillDAO.Instance.CheckOut(idBill, discount,(float)finalTotalPrice);
                     LoadTable();
                 }
+                LoadTable(); // Nếu bạn có danh sách bàn cần cập nhật trạng thái
+                
             }
+
         }
 
         private void đăngXuấtToolStripMenuItem1_Click(object sender, EventArgs e)
