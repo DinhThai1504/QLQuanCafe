@@ -29,7 +29,12 @@
         private void InitializeComponent()
         {
             this.tpAccount = new System.Windows.Forms.TabPage();
+            this.btnShowAccount = new System.Windows.Forms.Button();
             this.btnResetPassword = new System.Windows.Forms.Button();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txbUserName = new System.Windows.Forms.TextBox();
+            this.btnEditAccount = new System.Windows.Forms.Button();
             this.panel25 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -37,36 +42,31 @@
             this.panel27 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.txbDisPlayname = new System.Windows.Forms.TextBox();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txbUserName = new System.Windows.Forms.TextBox();
+            this.btnDeleteAccount = new System.Windows.Forms.Button();
             this.panel24 = new System.Windows.Forms.Panel();
             this.dtgvAccount = new System.Windows.Forms.DataGridView();
-            this.btnShowAccount = new System.Windows.Forms.Button();
-            this.btnEditAccount = new System.Windows.Forms.Button();
-            this.btnDeleteAccount = new System.Windows.Forms.Button();
             this.btnAddAccount = new System.Windows.Forms.Button();
             this.tpFood = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txbSearchFoodName = new System.Windows.Forms.TextBox();
             this.btnTimkiem = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnShowFood = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.nmFoodPrice = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnEditFood = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.cbFoodCategory = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnDeleteFood = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txbFoodName = new System.Windows.Forms.TextBox();
+            this.btnAddFood = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblId = new System.Windows.Forms.Label();
             this.txbFoodID = new System.Windows.Forms.TextBox();
-            this.btnShowFood = new System.Windows.Forms.Button();
-            this.btnEditFood = new System.Windows.Forms.Button();
-            this.btnDeleteFood = new System.Windows.Forms.Button();
-            this.btnAddFood = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dtgvFood = new System.Windows.Forms.DataGridView();
             this.tpBill = new System.Windows.Forms.TabPage();
@@ -84,11 +84,11 @@
             this.dtgvBill = new System.Windows.Forms.DataGridView();
             this.tcAdmin = new System.Windows.Forms.TabControl();
             this.tpAccount.SuspendLayout();
+            this.panel28.SuspendLayout();
             this.panel25.SuspendLayout();
             this.panel26.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel27.SuspendLayout();
-            this.panel28.SuspendLayout();
             this.panel24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).BeginInit();
             this.tpFood.SuspendLayout();
@@ -127,6 +127,18 @@
             this.tpAccount.TabIndex = 4;
             this.tpAccount.Text = "Tài khoản";
             // 
+            // btnShowAccount
+            // 
+            this.btnShowAccount.BackColor = System.Drawing.Color.Beige;
+            this.btnShowAccount.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowAccount.Location = new System.Drawing.Point(819, 191);
+            this.btnShowAccount.Name = "btnShowAccount";
+            this.btnShowAccount.Size = new System.Drawing.Size(84, 44);
+            this.btnShowAccount.TabIndex = 0;
+            this.btnShowAccount.Text = "Xem";
+            this.btnShowAccount.UseVisualStyleBackColor = false;
+            this.btnShowAccount.Click += new System.EventHandler(this.btnShowAccount_Click);
+            // 
             // btnResetPassword
             // 
             this.btnResetPassword.BackColor = System.Drawing.Color.Beige;
@@ -137,6 +149,48 @@
             this.btnResetPassword.Text = "Đặt lại mật khẩu";
             this.btnResetPassword.UseVisualStyleBackColor = false;
             this.btnResetPassword.Click += new System.EventHandler(this.btnDlmk_Click);
+            // 
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.Color.Beige;
+            this.panel28.Controls.Add(this.label11);
+            this.panel28.Controls.Add(this.txbUserName);
+            this.panel28.Location = new System.Drawing.Point(441, 9);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(495, 52);
+            this.panel28.TabIndex = 2;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(3, 15);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(116, 22);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Tên tài khoản:";
+            // 
+            // txbUserName
+            // 
+            this.txbUserName.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbUserName.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.txbUserName.Location = new System.Drawing.Point(125, 11);
+            this.txbUserName.Multiline = true;
+            this.txbUserName.Name = "txbUserName";
+            this.txbUserName.Size = new System.Drawing.Size(356, 26);
+            this.txbUserName.TabIndex = 1;
+            // 
+            // btnEditAccount
+            // 
+            this.btnEditAccount.BackColor = System.Drawing.Color.Beige;
+            this.btnEditAccount.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditAccount.Location = new System.Drawing.Point(611, 191);
+            this.btnEditAccount.Name = "btnEditAccount";
+            this.btnEditAccount.Size = new System.Drawing.Size(84, 44);
+            this.btnEditAccount.TabIndex = 0;
+            this.btnEditAccount.Text = "Sửa";
+            this.btnEditAccount.UseVisualStyleBackColor = false;
+            this.btnEditAccount.Click += new System.EventHandler(this.btnEditAccount_Click);
             // 
             // panel25
             // 
@@ -211,35 +265,17 @@
             this.txbDisPlayname.Size = new System.Drawing.Size(356, 26);
             this.txbDisPlayname.TabIndex = 1;
             // 
-            // panel28
+            // btnDeleteAccount
             // 
-            this.panel28.BackColor = System.Drawing.Color.Beige;
-            this.panel28.Controls.Add(this.label11);
-            this.panel28.Controls.Add(this.txbUserName);
-            this.panel28.Location = new System.Drawing.Point(441, 9);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(495, 52);
-            this.panel28.TabIndex = 2;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 15);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(116, 22);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Tên tài khoản:";
-            // 
-            // txbUserName
-            // 
-            this.txbUserName.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbUserName.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.txbUserName.Location = new System.Drawing.Point(125, 11);
-            this.txbUserName.Multiline = true;
-            this.txbUserName.Name = "txbUserName";
-            this.txbUserName.Size = new System.Drawing.Size(356, 26);
-            this.txbUserName.TabIndex = 1;
+            this.btnDeleteAccount.BackColor = System.Drawing.Color.Beige;
+            this.btnDeleteAccount.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteAccount.Location = new System.Drawing.Point(715, 191);
+            this.btnDeleteAccount.Name = "btnDeleteAccount";
+            this.btnDeleteAccount.Size = new System.Drawing.Size(84, 44);
+            this.btnDeleteAccount.TabIndex = 0;
+            this.btnDeleteAccount.Text = "Xóa";
+            this.btnDeleteAccount.UseVisualStyleBackColor = false;
+            this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
             // 
             // panel24
             // 
@@ -259,42 +295,6 @@
             this.dtgvAccount.RowTemplate.Height = 24;
             this.dtgvAccount.Size = new System.Drawing.Size(417, 650);
             this.dtgvAccount.TabIndex = 5;
-            // 
-            // btnShowAccount
-            // 
-            this.btnShowAccount.BackColor = System.Drawing.Color.Beige;
-            this.btnShowAccount.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowAccount.Location = new System.Drawing.Point(819, 191);
-            this.btnShowAccount.Name = "btnShowAccount";
-            this.btnShowAccount.Size = new System.Drawing.Size(84, 44);
-            this.btnShowAccount.TabIndex = 0;
-            this.btnShowAccount.Text = "Xem";
-            this.btnShowAccount.UseVisualStyleBackColor = false;
-            this.btnShowAccount.Click += new System.EventHandler(this.btnShowAccount_Click);
-            // 
-            // btnEditAccount
-            // 
-            this.btnEditAccount.BackColor = System.Drawing.Color.Beige;
-            this.btnEditAccount.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditAccount.Location = new System.Drawing.Point(715, 191);
-            this.btnEditAccount.Name = "btnEditAccount";
-            this.btnEditAccount.Size = new System.Drawing.Size(84, 44);
-            this.btnEditAccount.TabIndex = 0;
-            this.btnEditAccount.Text = "Sửa";
-            this.btnEditAccount.UseVisualStyleBackColor = false;
-            this.btnEditAccount.Click += new System.EventHandler(this.btnEditAccount_Click);
-            // 
-            // btnDeleteAccount
-            // 
-            this.btnDeleteAccount.BackColor = System.Drawing.Color.Beige;
-            this.btnDeleteAccount.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteAccount.Location = new System.Drawing.Point(609, 191);
-            this.btnDeleteAccount.Name = "btnDeleteAccount";
-            this.btnDeleteAccount.Size = new System.Drawing.Size(84, 44);
-            this.btnDeleteAccount.TabIndex = 0;
-            this.btnDeleteAccount.Text = "Xóa";
-            this.btnDeleteAccount.UseVisualStyleBackColor = false;
-            this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
             // 
             // btnAddAccount
             // 
@@ -366,6 +366,18 @@
             this.panel5.Size = new System.Drawing.Size(440, 593);
             this.panel5.TabIndex = 2;
             // 
+            // btnShowFood
+            // 
+            this.btnShowFood.BackColor = System.Drawing.Color.Beige;
+            this.btnShowFood.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowFood.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnShowFood.Location = new System.Drawing.Point(339, 256);
+            this.btnShowFood.Name = "btnShowFood";
+            this.btnShowFood.Size = new System.Drawing.Size(84, 44);
+            this.btnShowFood.TabIndex = 0;
+            this.btnShowFood.Text = "Xem";
+            this.btnShowFood.UseVisualStyleBackColor = false;
+            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.Beige;
@@ -402,6 +414,19 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Giá:";
             // 
+            // btnEditFood
+            // 
+            this.btnEditFood.BackColor = System.Drawing.Color.Beige;
+            this.btnEditFood.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditFood.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnEditFood.Location = new System.Drawing.Point(139, 256);
+            this.btnEditFood.Name = "btnEditFood";
+            this.btnEditFood.Size = new System.Drawing.Size(84, 44);
+            this.btnEditFood.TabIndex = 0;
+            this.btnEditFood.Text = "Sửa";
+            this.btnEditFood.UseVisualStyleBackColor = false;
+            this.btnEditFood.Click += new System.EventHandler(this.btnEditFood_Click);
+            // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Beige;
@@ -433,6 +458,19 @@
             this.label2.Size = new System.Drawing.Size(101, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Danh mục:";
+            // 
+            // btnDeleteFood
+            // 
+            this.btnDeleteFood.BackColor = System.Drawing.Color.Beige;
+            this.btnDeleteFood.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteFood.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnDeleteFood.Location = new System.Drawing.Point(238, 256);
+            this.btnDeleteFood.Name = "btnDeleteFood";
+            this.btnDeleteFood.Size = new System.Drawing.Size(84, 44);
+            this.btnDeleteFood.TabIndex = 0;
+            this.btnDeleteFood.Text = "Xóa";
+            this.btnDeleteFood.UseVisualStyleBackColor = false;
+            this.btnDeleteFood.Click += new System.EventHandler(this.btnDeleteFood_Click_1);
             // 
             // panel8
             // 
@@ -467,6 +505,19 @@
             this.txbFoodName.Size = new System.Drawing.Size(304, 26);
             this.txbFoodName.TabIndex = 1;
             // 
+            // btnAddFood
+            // 
+            this.btnAddFood.BackColor = System.Drawing.Color.Beige;
+            this.btnAddFood.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddFood.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnAddFood.Location = new System.Drawing.Point(39, 256);
+            this.btnAddFood.Name = "btnAddFood";
+            this.btnAddFood.Size = new System.Drawing.Size(84, 44);
+            this.btnAddFood.TabIndex = 0;
+            this.btnAddFood.Text = "Thêm";
+            this.btnAddFood.UseVisualStyleBackColor = false;
+            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Beige;
@@ -500,57 +551,6 @@
             this.txbFoodID.Size = new System.Drawing.Size(304, 26);
             this.txbFoodID.TabIndex = 1;
             this.txbFoodID.TextChanged += new System.EventHandler(this.txbFoodID_TextChanged);
-            // 
-            // btnShowFood
-            // 
-            this.btnShowFood.BackColor = System.Drawing.Color.Beige;
-            this.btnShowFood.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowFood.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.btnShowFood.Location = new System.Drawing.Point(339, 256);
-            this.btnShowFood.Name = "btnShowFood";
-            this.btnShowFood.Size = new System.Drawing.Size(84, 44);
-            this.btnShowFood.TabIndex = 0;
-            this.btnShowFood.Text = "Xem";
-            this.btnShowFood.UseVisualStyleBackColor = false;
-            // 
-            // btnEditFood
-            // 
-            this.btnEditFood.BackColor = System.Drawing.Color.Beige;
-            this.btnEditFood.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditFood.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.btnEditFood.Location = new System.Drawing.Point(139, 256);
-            this.btnEditFood.Name = "btnEditFood";
-            this.btnEditFood.Size = new System.Drawing.Size(84, 44);
-            this.btnEditFood.TabIndex = 0;
-            this.btnEditFood.Text = "Sửa";
-            this.btnEditFood.UseVisualStyleBackColor = false;
-            this.btnEditFood.Click += new System.EventHandler(this.btnEditFood_Click);
-            // 
-            // btnDeleteFood
-            // 
-            this.btnDeleteFood.BackColor = System.Drawing.Color.Beige;
-            this.btnDeleteFood.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteFood.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.btnDeleteFood.Location = new System.Drawing.Point(238, 256);
-            this.btnDeleteFood.Name = "btnDeleteFood";
-            this.btnDeleteFood.Size = new System.Drawing.Size(84, 44);
-            this.btnDeleteFood.TabIndex = 0;
-            this.btnDeleteFood.Text = "Xóa";
-            this.btnDeleteFood.UseVisualStyleBackColor = false;
-            this.btnDeleteFood.Click += new System.EventHandler(this.btnDeleteFood_Click_1);
-            // 
-            // btnAddFood
-            // 
-            this.btnAddFood.BackColor = System.Drawing.Color.Beige;
-            this.btnAddFood.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFood.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.btnAddFood.Location = new System.Drawing.Point(39, 256);
-            this.btnAddFood.Name = "btnAddFood";
-            this.btnAddFood.Size = new System.Drawing.Size(84, 44);
-            this.btnAddFood.TabIndex = 0;
-            this.btnAddFood.Text = "Thêm";
-            this.btnAddFood.UseVisualStyleBackColor = false;
-            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
             // panel3
             // 
@@ -748,14 +748,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADMIN";
             this.tpAccount.ResumeLayout(false);
+            this.panel28.ResumeLayout(false);
+            this.panel28.PerformLayout();
             this.panel25.ResumeLayout(false);
             this.panel26.ResumeLayout(false);
             this.panel26.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel27.ResumeLayout(false);
             this.panel27.PerformLayout();
-            this.panel28.ResumeLayout(false);
-            this.panel28.PerformLayout();
             this.panel24.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).EndInit();
             this.tpFood.ResumeLayout(false);
